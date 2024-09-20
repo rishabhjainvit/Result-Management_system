@@ -1,0 +1,236 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e272e; /* Dark background */
+    color: #ecf0f1; /* Light text color for contrast */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for homepage content */
+.homepage-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 100%;
+    box-sizing: border-box; /* Include padding in width/height calculation */
+    animation: fadeIn 1s ease-in-out; /* Added fade-in animation */
+}
+
+/* Left side: Image container */
+.image-container {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Ensures visibility */
+    animation: slideIn 1.2s ease-in-out forwards; /* Slide-in animation */
+}
+
+.illustration {
+    max-width: 100%; /* Ensure image fits within its container */
+    height: 80%; /* Increase height of the image */
+    transform: translateY(30px);
+    opacity: 1; /* Ensures image remains visible */
+    animation: imageSlide 1.5s ease-in-out forwards;
+}
+
+/* Right side: Content container */
+.content-container {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 20px;
+    text-align: left; /* Ensure text is aligned to the left */
+    opacity: 0;
+    animation: slideInRight 1.2s ease-in-out forwards 0.5s; /* Delayed slide-in */
+}
+
+h1 {
+    font-size: 48px;
+    color: #ecf0f1; /* Light color for dark background */
+    margin: 0;
+    text-align: left; /* Align the title */
+    animation: textFadeIn 1s ease-in-out forwards;
+}
+h2 {
+    font-size: 36px; /* Adjust font size as needed */
+    color: #ecf0f1; /* Light color for dark background */
+    margin: 10px 0; /* Adjust the margin */
+    text-align: left; /* Align text to the left */
+    letter-spacing: normal; /* Normal letter spacing */
+    animation: textFadeIn 1.2s ease-in-out forwards; /* Slight delay in fade-in */
+}
+
+
+
+.brand-name {
+    color: #9c88ff; /* Light purple for brand name */
+    display: inline-block;
+    animation: pulse 2s infinite; /* Pulsing animation for brand name */
+}
+
+.sub-heading {
+    font-size: 28px;
+    color: #718093;
+    margin: 20px 0;
+    animation: textFadeIn 1.5s ease-in-out forwards 0.7s;
+    text-align: left;
+}
+
+.description {
+    font-size: 18px;
+    color: #dcdde1;
+    margin: 0 0 30px;
+    animation: textFadeIn 1.5s ease-in-out forwards 0.9s;
+}
+
+/* Button styling with hover effects */
+/* Button styling with hover effects */
+.login-button {
+    background-color: #8c7ae6;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    margin-right: 15px; /* Add space between buttons */
+    animation: buttonFadeIn 1.5s ease-in-out forwards 1.1s;
+}
+
+/* Hover effect */
+.login-button:hover {
+    background-color: #6c5ce7; /* Slightly darker shade of the button */
+    transform: translateY(-5px); /* Lift the button */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.login-button:last-child {
+    margin-right: 15; /* Remove margin for the last button */
+}
+
+
+.signup-text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ecf0f1;
+    animation: textFadeIn 1.5s ease-in-out forwards 1.3s;
+}
+
+.signup-link {
+    color: #8c7ae6;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+    color: #6c5ce7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes imageSlide {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .homepage-container {
+        flex-direction: column;
+        text-align: center; /* Center-align text on smaller screens */
+        padding: 20px;
+    }
+    
+    .content-container {
+        padding: 0;
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+    }
+
+    .illustration {
+        height: 50%;
+    }
+}
