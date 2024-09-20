@@ -57,5 +57,5 @@ The **Result Management System** is a web-based platform designed for **students
 This README provides clear instructions for developers and users to understand the project and run it locally.
 
 Contact Info
-LinkedIN:https://www.linkedin.com/in/rishabh-jain-a56398230/
+LinkedIN : https://www.linkedin.com/in/rishabh-jain-a56398230/
 
