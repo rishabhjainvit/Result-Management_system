@@ -48,9 +48,11 @@ The **Result Management System** is a web-based platform designed for **students
    git clone https://github.com/rishabhjainvit/Result_Management-System.git
 
 
-### Key Additions:
-- **Emojis** to make the README visually appealing.
-- Detailed, clear sections for ease of understanding.
-- Organized folder structure and installation steps.
+### Key Points:
 
-You can copy and paste this into your `README.md` file. Feel free to modify it to suit your project's specifics!
+- Make sure to replace the environment variables in the `.env` file (`MONGO_URI`, `JWT_SECRET`) with your actual values.
+- You can modify this template to include more details specific to your project if needed.
+- Push this `README.md` to your repository after placing it in the root directory of your project.
+
+This README provides clear instructions for developers and users to understand the project and run it locally.
+
